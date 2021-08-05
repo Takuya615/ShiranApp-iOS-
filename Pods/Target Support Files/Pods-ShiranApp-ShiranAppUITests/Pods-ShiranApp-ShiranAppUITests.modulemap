@@ -1,0 +1,6 @@
+framework module Pods_ShiranApp_ShiranAppUITests {
+  umbrella header "Pods-ShiranApp-ShiranAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

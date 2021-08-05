@@ -1,0 +1,805 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E8547FB45E4D470CDFA6E7B /* Pods_ShiranApp_ShiranAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B545AF07B8CE8336DA95BCFB /* Pods_ShiranApp_ShiranAppUITests.framework */; };
+		AA0316BD96EE0BA48B3A261B /* Pods_ShiranAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4DF328DA666FC2A71986A6 /* Pods_ShiranAppTests.framework */; };
+		B3A68DC880A00ED6FE91E151 /* Pods_ShiranApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0D7D70F2B984246DE05ABC /* Pods_ShiranApp.framework */; };
+		CE2DDF6126AAFD0200CD9C39 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DDF6026AAFD0200CD9C39 /* VideoCapture.swift */; };
+		CE9033A826B506CC00C88EF1 /* MovieCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9033A726B506CC00C88EF1 /* MovieCreator.swift */; };
+		CE9033AA26B582FC00C88EF1 /* VideoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9033A926B582FC00C88EF1 /* VideoCaptureView.swift */; };
+		CEB3512C26A4F9E100D42BDD /* ShiranAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3512B26A4F9E100D42BDD /* ShiranAppApp.swift */; };
+		CEB3512E26A4F9E100D42BDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3512D26A4F9E100D42BDD /* ContentView.swift */; };
+		CEB3513026A4F9E500D42BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3512F26A4F9E500D42BDD /* Assets.xcassets */; };
+		CEB3513326A4F9E500D42BDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3513226A4F9E500D42BDD /* Preview Assets.xcassets */; };
+		CEB3513E26A4F9E500D42BDD /* ShiranAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3513D26A4F9E500D42BDD /* ShiranAppTests.swift */; };
+		CEB3514926A4F9E500D42BDD /* ShiranAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3514826A4F9E500D42BDD /* ShiranAppUITests.swift */; };
+		CEB3515726A4FA5300D42BDD /* VideoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3515626A4FA5300D42BDD /* VideoCamera.swift */; };
+		CEB3515926A4FA8100D42BDD /* PoseDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3515826A4FA8100D42BDD /* PoseDetection.swift */; };
+		CEB3515D26A4FE4900D42BDD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEB3515C26A4FE4900D42BDD /* GoogleService-Info.plist */; };
+		CEB3515F26A5047B00D42BDD /* SaveVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3515E26A5047A00D42BDD /* SaveVideo.swift */; };
+		CED0323F26A681B30022BC68 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0323C26A681B30022BC68 /* RootView.swift */; };
+		CED0324026A681B30022BC68 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0323D26A681B30022BC68 /* LoginView.swift */; };
+		CED0324126A681B30022BC68 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0323E26A681B30022BC68 /* PlayerView.swift */; };
+		CED0324726A7B81E0022BC68 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0324626A7B81E0022BC68 /* PrivacyPolicyView.swift */; };
+		CEF972D926BA2F8E0010E167 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF972D826BA2F8E0010E167 /* Sounds.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEB3513A26A4F9E500D42BDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEB3512026A4F9E100D42BDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEB3512726A4F9E100D42BDD;
+			remoteInfo = ShiranApp;
+		};
+		CEB3514526A4F9E500D42BDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEB3512026A4F9E100D42BDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEB3512726A4F9E100D42BDD;
+			remoteInfo = ShiranApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F0D7D70F2B984246DE05ABC /* Pods_ShiranApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiranApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FA3B65AD7DB65E11B6E456A /* Pods-ShiranApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranApp.debug.xcconfig"; path = "Target Support Files/Pods-ShiranApp/Pods-ShiranApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9A51AC206B1C5B21CC415B70 /* Pods-ShiranApp-ShiranAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranApp-ShiranAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-ShiranApp-ShiranAppUITests/Pods-ShiranApp-ShiranAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D96EE3035EFD28BBFF14860 /* Pods-ShiranAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranAppTests.debug.xcconfig"; path = "Target Support Files/Pods-ShiranAppTests/Pods-ShiranAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AC4DF328DA666FC2A71986A6 /* Pods_ShiranAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiranAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B545AF07B8CE8336DA95BCFB /* Pods_ShiranApp_ShiranAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiranApp_ShiranAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D5DA29FAEEBEE40CAF7F7F /* Pods-ShiranApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranApp.release.xcconfig"; path = "Target Support Files/Pods-ShiranApp/Pods-ShiranApp.release.xcconfig"; sourceTree = "<group>"; };
+		CE2DDF6026AAFD0200CD9C39 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
+		CE9033A726B506CC00C88EF1 /* MovieCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreator.swift; sourceTree = "<group>"; };
+		CE9033A926B582FC00C88EF1 /* VideoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureView.swift; sourceTree = "<group>"; };
+		CEB3512826A4F9E100D42BDD /* ShiranApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiranApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB3512B26A4F9E100D42BDD /* ShiranAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiranAppApp.swift; sourceTree = "<group>"; };
+		CEB3512D26A4F9E100D42BDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEB3512F26A4F9E500D42BDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEB3513226A4F9E500D42BDD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEB3513426A4F9E500D42BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB3513926A4F9E500D42BDD /* ShiranAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiranAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB3513D26A4F9E500D42BDD /* ShiranAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiranAppTests.swift; sourceTree = "<group>"; };
+		CEB3513F26A4F9E500D42BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB3514426A4F9E500D42BDD /* ShiranAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiranAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEB3514826A4F9E500D42BDD /* ShiranAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiranAppUITests.swift; sourceTree = "<group>"; };
+		CEB3514A26A4F9E500D42BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEB3515626A4FA5300D42BDD /* VideoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCamera.swift; sourceTree = "<group>"; };
+		CEB3515826A4FA8100D42BDD /* PoseDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDetection.swift; sourceTree = "<group>"; };
+		CEB3515C26A4FE4900D42BDD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEB3515E26A5047A00D42BDD /* SaveVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveVideo.swift; sourceTree = "<group>"; };
+		CED0323C26A681B30022BC68 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		CED0323D26A681B30022BC68 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		CED0323E26A681B30022BC68 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		CED0324626A7B81E0022BC68 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		CEF972D826BA2F8E0010E167 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		D23035538562B19A6D4C97CE /* Pods-ShiranAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranAppTests.release.xcconfig"; path = "Target Support Files/Pods-ShiranAppTests/Pods-ShiranAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		E8991AB57F82B16BDDB6E55B /* Pods-ShiranApp-ShiranAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranApp-ShiranAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ShiranApp-ShiranAppUITests/Pods-ShiranApp-ShiranAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEB3512526A4F9E100D42BDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3A68DC880A00ED6FE91E151 /* Pods_ShiranApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB3513626A4F9E500D42BDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA0316BD96EE0BA48B3A261B /* Pods_ShiranAppTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB3514126A4F9E500D42BDD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8547FB45E4D470CDFA6E7B /* Pods_ShiranApp_ShiranAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A779DC8019DE8C6CA21412B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F0D7D70F2B984246DE05ABC /* Pods_ShiranApp.framework */,
+				B545AF07B8CE8336DA95BCFB /* Pods_ShiranApp_ShiranAppUITests.framework */,
+				AC4DF328DA666FC2A71986A6 /* Pods_ShiranAppTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEB3511F26A4F9E100D42BDD = {
+			isa = PBXGroup;
+			children = (
+				CEB3512A26A4F9E100D42BDD /* ShiranApp */,
+				CEB3513C26A4F9E500D42BDD /* ShiranAppTests */,
+				CEB3514726A4F9E500D42BDD /* ShiranAppUITests */,
+				CEB3512926A4F9E100D42BDD /* Products */,
+				FC46DA09A533912931D842F4 /* Pods */,
+				2A779DC8019DE8C6CA21412B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEB3512926A4F9E100D42BDD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3512826A4F9E100D42BDD /* ShiranApp.app */,
+				CEB3513926A4F9E500D42BDD /* ShiranAppTests.xctest */,
+				CEB3514426A4F9E500D42BDD /* ShiranAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEB3512A26A4F9E100D42BDD /* ShiranApp */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3512B26A4F9E100D42BDD /* ShiranAppApp.swift */,
+				CED0324226A6CED30022BC68 /* View */,
+				CED0324326A6CF130022BC68 /* Data */,
+				CEB3512F26A4F9E500D42BDD /* Assets.xcassets */,
+				CEB3513426A4F9E500D42BDD /* Info.plist */,
+				CEB3515C26A4FE4900D42BDD /* GoogleService-Info.plist */,
+				CEB3513126A4F9E500D42BDD /* Preview Content */,
+			);
+			path = ShiranApp;
+			sourceTree = "<group>";
+		};
+		CEB3513126A4F9E500D42BDD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3513226A4F9E500D42BDD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEB3513C26A4F9E500D42BDD /* ShiranAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3513D26A4F9E500D42BDD /* ShiranAppTests.swift */,
+				CEB3513F26A4F9E500D42BDD /* Info.plist */,
+			);
+			path = ShiranAppTests;
+			sourceTree = "<group>";
+		};
+		CEB3514726A4F9E500D42BDD /* ShiranAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3514826A4F9E500D42BDD /* ShiranAppUITests.swift */,
+				CEB3514A26A4F9E500D42BDD /* Info.plist */,
+			);
+			path = ShiranAppUITests;
+			sourceTree = "<group>";
+		};
+		CED0324226A6CED30022BC68 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CED0323C26A681B30022BC68 /* RootView.swift */,
+				CED0323D26A681B30022BC68 /* LoginView.swift */,
+				CEB3512D26A4F9E100D42BDD /* ContentView.swift */,
+				CED0323E26A681B30022BC68 /* PlayerView.swift */,
+				CED0324626A7B81E0022BC68 /* PrivacyPolicyView.swift */,
+				CE9033A926B582FC00C88EF1 /* VideoCaptureView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CED0324326A6CF130022BC68 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CEB3515626A4FA5300D42BDD /* VideoCamera.swift */,
+				CEB3515826A4FA8100D42BDD /* PoseDetection.swift */,
+				CEB3515E26A5047A00D42BDD /* SaveVideo.swift */,
+				CE2DDF6026AAFD0200CD9C39 /* VideoCapture.swift */,
+				CE9033A726B506CC00C88EF1 /* MovieCreator.swift */,
+				CEF972D826BA2F8E0010E167 /* Sounds.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FC46DA09A533912931D842F4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1FA3B65AD7DB65E11B6E456A /* Pods-ShiranApp.debug.xcconfig */,
+				C1D5DA29FAEEBEE40CAF7F7F /* Pods-ShiranApp.release.xcconfig */,
+				9A51AC206B1C5B21CC415B70 /* Pods-ShiranApp-ShiranAppUITests.debug.xcconfig */,
+				E8991AB57F82B16BDDB6E55B /* Pods-ShiranApp-ShiranAppUITests.release.xcconfig */,
+				9D96EE3035EFD28BBFF14860 /* Pods-ShiranAppTests.debug.xcconfig */,
+				D23035538562B19A6D4C97CE /* Pods-ShiranAppTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEB3512726A4F9E100D42BDD /* ShiranApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB3514D26A4F9E500D42BDD /* Build configuration list for PBXNativeTarget "ShiranApp" */;
+			buildPhases = (
+				F9167BE8882D482C6A21AF53 /* [CP] Check Pods Manifest.lock */,
+				CEB3512426A4F9E100D42BDD /* Sources */,
+				CEB3512526A4F9E100D42BDD /* Frameworks */,
+				CEB3512626A4F9E100D42BDD /* Resources */,
+				703ABEE66A6E59A76E17C08E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShiranApp;
+			productName = ShiranApp;
+			productReference = CEB3512826A4F9E100D42BDD /* ShiranApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEB3513826A4F9E500D42BDD /* ShiranAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB3515026A4F9E500D42BDD /* Build configuration list for PBXNativeTarget "ShiranAppTests" */;
+			buildPhases = (
+				E9B9C8A690B6E57B11C1CAE0 /* [CP] Check Pods Manifest.lock */,
+				CEB3513526A4F9E500D42BDD /* Sources */,
+				CEB3513626A4F9E500D42BDD /* Frameworks */,
+				CEB3513726A4F9E500D42BDD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEB3513B26A4F9E500D42BDD /* PBXTargetDependency */,
+			);
+			name = ShiranAppTests;
+			productName = ShiranAppTests;
+			productReference = CEB3513926A4F9E500D42BDD /* ShiranAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEB3514326A4F9E500D42BDD /* ShiranAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEB3515326A4F9E500D42BDD /* Build configuration list for PBXNativeTarget "ShiranAppUITests" */;
+			buildPhases = (
+				C18795CA9C236E0924DA25A3 /* [CP] Check Pods Manifest.lock */,
+				CEB3514026A4F9E500D42BDD /* Sources */,
+				CEB3514126A4F9E500D42BDD /* Frameworks */,
+				CEB3514226A4F9E500D42BDD /* Resources */,
+				C43A54499FBB836F611A7CC2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEB3514626A4F9E500D42BDD /* PBXTargetDependency */,
+			);
+			name = ShiranAppUITests;
+			productName = ShiranAppUITests;
+			productReference = CEB3514426A4F9E500D42BDD /* ShiranAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEB3512026A4F9E100D42BDD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					CEB3512726A4F9E100D42BDD = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					CEB3513826A4F9E500D42BDD = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = CEB3512726A4F9E100D42BDD;
+					};
+					CEB3514326A4F9E500D42BDD = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = CEB3512726A4F9E100D42BDD;
+					};
+				};
+			};
+			buildConfigurationList = CEB3512326A4F9E100D42BDD /* Build configuration list for PBXProject "ShiranApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEB3511F26A4F9E100D42BDD;
+			productRefGroup = CEB3512926A4F9E100D42BDD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEB3512726A4F9E100D42BDD /* ShiranApp */,
+				CEB3513826A4F9E500D42BDD /* ShiranAppTests */,
+				CEB3514326A4F9E500D42BDD /* ShiranAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEB3512626A4F9E100D42BDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB3513326A4F9E500D42BDD /* Preview Assets.xcassets in Resources */,
+				CEB3515D26A4FE4900D42BDD /* GoogleService-Info.plist in Resources */,
+				CEB3513026A4F9E500D42BDD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB3513726A4F9E500D42BDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB3514226A4F9E500D42BDD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		703ABEE66A6E59A76E17C08E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShiranApp/Pods-ShiranApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShiranApp/Pods-ShiranApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShiranApp/Pods-ShiranApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C18795CA9C236E0924DA25A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiranApp-ShiranAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C43A54499FBB836F611A7CC2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShiranApp-ShiranAppUITests/Pods-ShiranApp-ShiranAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShiranApp-ShiranAppUITests/Pods-ShiranApp-ShiranAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShiranApp-ShiranAppUITests/Pods-ShiranApp-ShiranAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9B9C8A690B6E57B11C1CAE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiranAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F9167BE8882D482C6A21AF53 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShiranApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEB3512426A4F9E100D42BDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB3515926A4FA8100D42BDD /* PoseDetection.swift in Sources */,
+				CED0324026A681B30022BC68 /* LoginView.swift in Sources */,
+				CEB3512E26A4F9E100D42BDD /* ContentView.swift in Sources */,
+				CE9033AA26B582FC00C88EF1 /* VideoCaptureView.swift in Sources */,
+				CEF972D926BA2F8E0010E167 /* Sounds.swift in Sources */,
+				CED0324726A7B81E0022BC68 /* PrivacyPolicyView.swift in Sources */,
+				CED0324126A681B30022BC68 /* PlayerView.swift in Sources */,
+				CE9033A826B506CC00C88EF1 /* MovieCreator.swift in Sources */,
+				CED0323F26A681B30022BC68 /* RootView.swift in Sources */,
+				CE2DDF6126AAFD0200CD9C39 /* VideoCapture.swift in Sources */,
+				CEB3512C26A4F9E100D42BDD /* ShiranAppApp.swift in Sources */,
+				CEB3515726A4FA5300D42BDD /* VideoCamera.swift in Sources */,
+				CEB3515F26A5047B00D42BDD /* SaveVideo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB3513526A4F9E500D42BDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB3513E26A4F9E500D42BDD /* ShiranAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEB3514026A4F9E500D42BDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEB3514926A4F9E500D42BDD /* ShiranAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEB3513B26A4F9E500D42BDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEB3512726A4F9E100D42BDD /* ShiranApp */;
+			targetProxy = CEB3513A26A4F9E500D42BDD /* PBXContainerItemProxy */;
+		};
+		CEB3514626A4F9E500D42BDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEB3512726A4F9E100D42BDD /* ShiranApp */;
+			targetProxy = CEB3514526A4F9E500D42BDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CEB3514B26A4F9E500D42BDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEB3514C26A4F9E500D42BDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEB3514E26A4F9E500D42BDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FA3B65AD7DB65E11B6E456A /* Pods-ShiranApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ShiranApp/Preview Content\"";
+				DEVELOPMENT_TEAM = C4FH99N43Y;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ShiranApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myapplication.ShiranApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SUPPRESS_WARNINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CEB3514F26A4F9E500D42BDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1D5DA29FAEEBEE40CAF7F7F /* Pods-ShiranApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"ShiranApp/Preview Content\"";
+				DEVELOPMENT_TEAM = C4FH99N43Y;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = ShiranApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myapplication.ShiranApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SUPPRESS_WARNINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CEB3515126A4F9E500D42BDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D96EE3035EFD28BBFF14860 /* Pods-ShiranAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C4FH99N43Y;
+				INFOPLIST_FILE = ShiranAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myapplication.ShiranAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShiranApp.app/ShiranApp";
+			};
+			name = Debug;
+		};
+		CEB3515226A4F9E500D42BDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D23035538562B19A6D4C97CE /* Pods-ShiranAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C4FH99N43Y;
+				INFOPLIST_FILE = ShiranAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myapplication.ShiranAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShiranApp.app/ShiranApp";
+			};
+			name = Release;
+		};
+		CEB3515426A4F9E500D42BDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A51AC206B1C5B21CC415B70 /* Pods-ShiranApp-ShiranAppUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C4FH99N43Y;
+				INFOPLIST_FILE = ShiranAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myapplication.ShiranAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShiranApp;
+			};
+			name = Debug;
+		};
+		CEB3515526A4F9E500D42BDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8991AB57F82B16BDDB6E55B /* Pods-ShiranApp-ShiranAppUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C4FH99N43Y;
+				INFOPLIST_FILE = ShiranAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = myapplication.ShiranAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShiranApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEB3512326A4F9E100D42BDD /* Build configuration list for PBXProject "ShiranApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB3514B26A4F9E500D42BDD /* Debug */,
+				CEB3514C26A4F9E500D42BDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB3514D26A4F9E500D42BDD /* Build configuration list for PBXNativeTarget "ShiranApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB3514E26A4F9E500D42BDD /* Debug */,
+				CEB3514F26A4F9E500D42BDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB3515026A4F9E500D42BDD /* Build configuration list for PBXNativeTarget "ShiranAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB3515126A4F9E500D42BDD /* Debug */,
+				CEB3515226A4F9E500D42BDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEB3515326A4F9E500D42BDD /* Build configuration list for PBXNativeTarget "ShiranAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEB3515426A4F9E500D42BDD /* Debug */,
+				CEB3515526A4F9E500D42BDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEB3512026A4F9E100D42BDD /* Project object */;
+}
