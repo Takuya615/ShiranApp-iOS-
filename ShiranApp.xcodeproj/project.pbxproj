@@ -10,6 +10,7 @@
 		2E8547FB45E4D470CDFA6E7B /* Pods_ShiranApp_ShiranAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B545AF07B8CE8336DA95BCFB /* Pods_ShiranApp_ShiranAppUITests.framework */; };
 		AA0316BD96EE0BA48B3A261B /* Pods_ShiranAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4DF328DA666FC2A71986A6 /* Pods_ShiranAppTests.framework */; };
 		B3A68DC880A00ED6FE91E151 /* Pods_ShiranApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0D7D70F2B984246DE05ABC /* Pods_ShiranApp.framework */; };
+		CE24A57E26C63C2D00085982 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24A57D26C63C2D00085982 /* ViewController2.swift */; };
 		CE2DDF6126AAFD0200CD9C39 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DDF6026AAFD0200CD9C39 /* VideoCapture.swift */; };
 		CE9033A826B506CC00C88EF1 /* MovieCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9033A726B506CC00C88EF1 /* MovieCreator.swift */; };
 		CE9033AA26B582FC00C88EF1 /* VideoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9033A926B582FC00C88EF1 /* VideoCaptureView.swift */; };
@@ -19,14 +20,14 @@
 		CEB3513326A4F9E500D42BDD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3513226A4F9E500D42BDD /* Preview Assets.xcassets */; };
 		CEB3513E26A4F9E500D42BDD /* ShiranAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3513D26A4F9E500D42BDD /* ShiranAppTests.swift */; };
 		CEB3514926A4F9E500D42BDD /* ShiranAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3514826A4F9E500D42BDD /* ShiranAppUITests.swift */; };
-		CEB3515726A4FA5300D42BDD /* VideoCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3515626A4FA5300D42BDD /* VideoCamera.swift */; };
-		CEB3515926A4FA8100D42BDD /* PoseDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3515826A4FA8100D42BDD /* PoseDetection.swift */; };
 		CEB3515D26A4FE4900D42BDD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEB3515C26A4FE4900D42BDD /* GoogleService-Info.plist */; };
 		CEB3515F26A5047B00D42BDD /* SaveVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3515E26A5047A00D42BDD /* SaveVideo.swift */; };
 		CED0323F26A681B30022BC68 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0323C26A681B30022BC68 /* RootView.swift */; };
 		CED0324026A681B30022BC68 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0323D26A681B30022BC68 /* LoginView.swift */; };
 		CED0324126A681B30022BC68 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0323E26A681B30022BC68 /* PlayerView.swift */; };
 		CED0324726A7B81E0022BC68 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0324626A7B81E0022BC68 /* PrivacyPolicyView.swift */; };
+		CEEBDC8E26C206C70005A7E6 /* VideoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEBDC8D26C206C70005A7E6 /* VideoWriter.swift */; };
+		CEEBDCCD26C2A3420005A7E6 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEBDCCC26C2A3420005A7E6 /* VideoViewController.swift */; };
 		CEF972D926BA2F8E0010E167 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF972D826BA2F8E0010E167 /* Sounds.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		AC4DF328DA666FC2A71986A6 /* Pods_ShiranAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiranAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B545AF07B8CE8336DA95BCFB /* Pods_ShiranApp_ShiranAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiranApp_ShiranAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D5DA29FAEEBEE40CAF7F7F /* Pods-ShiranApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranApp.release.xcconfig"; path = "Target Support Files/Pods-ShiranApp/Pods-ShiranApp.release.xcconfig"; sourceTree = "<group>"; };
+		CE24A57D26C63C2D00085982 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		CE2DDF6026AAFD0200CD9C39 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		CE9033A726B506CC00C88EF1 /* MovieCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreator.swift; sourceTree = "<group>"; };
 		CE9033A926B582FC00C88EF1 /* VideoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureView.swift; sourceTree = "<group>"; };
@@ -70,14 +72,14 @@
 		CEB3514426A4F9E500D42BDD /* ShiranAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShiranAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3514826A4F9E500D42BDD /* ShiranAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiranAppUITests.swift; sourceTree = "<group>"; };
 		CEB3514A26A4F9E500D42BDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CEB3515626A4FA5300D42BDD /* VideoCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCamera.swift; sourceTree = "<group>"; };
-		CEB3515826A4FA8100D42BDD /* PoseDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDetection.swift; sourceTree = "<group>"; };
 		CEB3515C26A4FE4900D42BDD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEB3515E26A5047A00D42BDD /* SaveVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveVideo.swift; sourceTree = "<group>"; };
 		CED0323C26A681B30022BC68 /* RootView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		CED0323D26A681B30022BC68 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CED0323E26A681B30022BC68 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		CED0324626A7B81E0022BC68 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		CEEBDC8D26C206C70005A7E6 /* VideoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoWriter.swift; sourceTree = "<group>"; };
+		CEEBDCCC26C2A3420005A7E6 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		CEF972D826BA2F8E0010E167 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
 		D23035538562B19A6D4C97CE /* Pods-ShiranAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranAppTests.release.xcconfig"; path = "Target Support Files/Pods-ShiranAppTests/Pods-ShiranAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		E8991AB57F82B16BDDB6E55B /* Pods-ShiranApp-ShiranAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranApp-ShiranAppUITests.release.xcconfig"; path = "Target Support Files/Pods-ShiranApp-ShiranAppUITests/Pods-ShiranApp-ShiranAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,12 +201,13 @@
 		CED0324326A6CF130022BC68 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				CEB3515626A4FA5300D42BDD /* VideoCamera.swift */,
-				CEB3515826A4FA8100D42BDD /* PoseDetection.swift */,
-				CEB3515E26A5047A00D42BDD /* SaveVideo.swift */,
+				CEEBDCCC26C2A3420005A7E6 /* VideoViewController.swift */,
 				CE2DDF6026AAFD0200CD9C39 /* VideoCapture.swift */,
-				CE9033A726B506CC00C88EF1 /* MovieCreator.swift */,
+				CEEBDC8D26C206C70005A7E6 /* VideoWriter.swift */,
 				CEF972D826BA2F8E0010E167 /* Sounds.swift */,
+				CEB3515E26A5047A00D42BDD /* SaveVideo.swift */,
+				CE24A57D26C63C2D00085982 /* ViewController2.swift */,
+				CE9033A726B506CC00C88EF1 /* MovieCreator.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -460,18 +463,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB3515926A4FA8100D42BDD /* PoseDetection.swift in Sources */,
 				CED0324026A681B30022BC68 /* LoginView.swift in Sources */,
 				CEB3512E26A4F9E100D42BDD /* ContentView.swift in Sources */,
 				CE9033AA26B582FC00C88EF1 /* VideoCaptureView.swift in Sources */,
 				CEF972D926BA2F8E0010E167 /* Sounds.swift in Sources */,
+				CEEBDC8E26C206C70005A7E6 /* VideoWriter.swift in Sources */,
+				CEEBDCCD26C2A3420005A7E6 /* VideoViewController.swift in Sources */,
 				CED0324726A7B81E0022BC68 /* PrivacyPolicyView.swift in Sources */,
+				CE24A57E26C63C2D00085982 /* ViewController2.swift in Sources */,
 				CED0324126A681B30022BC68 /* PlayerView.swift in Sources */,
 				CE9033A826B506CC00C88EF1 /* MovieCreator.swift in Sources */,
 				CED0323F26A681B30022BC68 /* RootView.swift in Sources */,
 				CE2DDF6126AAFD0200CD9C39 /* VideoCapture.swift in Sources */,
 				CEB3512C26A4F9E100D42BDD /* ShiranAppApp.swift in Sources */,
-				CEB3515726A4FA5300D42BDD /* VideoCamera.swift in Sources */,
 				CEB3515F26A5047B00D42BDD /* SaveVideo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -69,7 +69,7 @@ struct VideoCaptureView: View {
             }
             ZStack{
                 
-                VideoCameraView123()
+                VideoCameraView()
                 /*VStack{
                     Spacer()
                     Button(action: {self.isrecording.toggle()}, label: {

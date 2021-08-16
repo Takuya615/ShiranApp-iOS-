@@ -38,7 +38,7 @@ class SaveVideo{
         riversRef.putFile(from: outputFileURL, metadata: metadata) { metadata, error in
           riversRef.downloadURL { (url, error) in
             guard url != nil else {// Uh-oh, an error occurred! エラーした場合の記述
-                print("エラー　動画保存　URL生成　エラー　\(String(describing: error))")
+                print("エラー　URL生成しっぱい　\(String(describing: error))")
                 return
             }
             
