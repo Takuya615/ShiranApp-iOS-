@@ -8,6 +8,7 @@
 
 import CoreML
 import AVFoundation
+/*
 protocol VideoCaptureDelegate: AnyObject {
     func didSet(_ previewLayer: AVCaptureVideoPreviewLayer)
     func didCaptureFrame(from cgImage: CGImage)/*CVImageBuffer)*/
@@ -116,12 +117,13 @@ class VideoCapture: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCa
     
 }
 
-
+*/
 
 
 
 
 import Vision
+/*
 protocol Resnet50ModelManagerDelegate: AnyObject {
     func didRecieve(_ observation: VNHumanBodyPoseObservation)
 }
@@ -160,7 +162,7 @@ class Resnet50ModelManager: NSObject {
     }
 }
 
-
+*/
 
 
 
@@ -175,6 +177,7 @@ class PoseView: UIView{
         self.points = points
         self.score = score
         super .init(frame: frame)
+        self.isUserInteractionEnabled = false // 重なったViewでもボタン押せる
     }
     
     required init?(coder: NSCoder) {
@@ -182,12 +185,15 @@ class PoseView: UIView{
     }
     
     override func draw(_ rect: CGRect) {
+        //print("描画してるCGRectは width \(rect.width) , height \(rect.height)")
+        let t: CGFloat = 2.5
         //let h = rect.height
         //let w = rect.width
+        
         for point in points {
             if point.x == 0 {continue}
             let circle = UIBezierPath(
-                arcCenter: CGPoint(x: point.x, y: point.y),
+                arcCenter: CGPoint(x: point.x*t, y: point.y*t),//                   *t  *t
                 radius: 10,
                 startAngle: 0,
                 endAngle: CGFloat(Double.pi)*2,
@@ -205,8 +211,8 @@ class PoseView: UIView{
         let path = UIBezierPath()
         for i in 0...11{
             if points[startP[i]].x == 0 || points[endP[i]].x == 0 {continue}
-            path.move(to: CGPoint(x: points[startP[i]].x, y: points[startP[i]].y))
-            path.addLine(to: CGPoint(x: points[endP[i]].x, y: points[endP[i]].y))
+            path.move(to: CGPoint(x: points[startP[i]].x*t, y: points[startP[i]].y*t))//              *t  *t
+            path.addLine(to: CGPoint(x: points[endP[i]].x*t, y: points[endP[i]].y*t))//               *t  *t
         }
         path.lineWidth = 8.0 // 線の太さ
         UIColor.yellow.setStroke() // 色をセット

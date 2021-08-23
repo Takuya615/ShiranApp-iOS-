@@ -89,6 +89,26 @@
 #import <MLKitTextRecognition/MLKitTextRecognition.h>
 #endif
 
+#if __has_include(<MLKitTextRecognitionChinese/MLKitTextRecognitionChinese.h>)
+#import <MLKitTextRecognitionChinese/MLKitTextRecognitionChinese.h>
+#endif
+
+#if __has_include(<MLKitTextRecognitionCommon/MLKitTextRecognitionCommon.h>)
+#import <MLKitTextRecognitionCommon/MLKitTextRecognitionCommon.h>
+#endif
+
+#if __has_include(<MLKitTextRecognitionDevanagari/MLKitTextRecognitionDevanagari.h>)
+#import <MLKitTextRecognitionDevanagari/MLKitTextRecognitionDevanagari.h>
+#endif
+
+#if __has_include(<MLKitTextRecognitionJapanese/MLKitTextRecognitionJapanese.h>)
+#import <MLKitTextRecognitionJapanese/MLKitTextRecognitionJapanese.h>
+#endif
+
+#if __has_include(<MLKitTextRecognitionKorean/MLKitTextRecognitionKorean.h>)
+#import <MLKitTextRecognitionKorean/MLKitTextRecognitionKorean.h>
+#endif
+
 #if __has_include(<MLKitTranslate/MLKitTranslate.h>)
 #import <MLKitTranslate/MLKitTranslate.h>
 #endif

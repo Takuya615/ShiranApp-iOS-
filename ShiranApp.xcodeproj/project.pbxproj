@@ -10,10 +10,11 @@
 		2E8547FB45E4D470CDFA6E7B /* Pods_ShiranApp_ShiranAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B545AF07B8CE8336DA95BCFB /* Pods_ShiranApp_ShiranAppUITests.framework */; };
 		AA0316BD96EE0BA48B3A261B /* Pods_ShiranAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4DF328DA666FC2A71986A6 /* Pods_ShiranAppTests.framework */; };
 		B3A68DC880A00ED6FE91E151 /* Pods_ShiranApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F0D7D70F2B984246DE05ABC /* Pods_ShiranApp.framework */; };
-		CE24A57E26C63C2D00085982 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24A57D26C63C2D00085982 /* ViewController2.swift */; };
+		CE24A57E26C63C2D00085982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE24A57D26C63C2D00085982 /* ViewController.swift */; };
 		CE2DDF6126AAFD0200CD9C39 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2DDF6026AAFD0200CD9C39 /* VideoCapture.swift */; };
 		CE9033A826B506CC00C88EF1 /* MovieCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9033A726B506CC00C88EF1 /* MovieCreator.swift */; };
 		CE9033AA26B582FC00C88EF1 /* VideoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9033A926B582FC00C88EF1 /* VideoCaptureView.swift */; };
+		CEB19E0526CB722C00570126 /* PoseDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB19E0426CB722C00570126 /* PoseDetection.swift */; };
 		CEB3512C26A4F9E100D42BDD /* ShiranAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3512B26A4F9E100D42BDD /* ShiranAppApp.swift */; };
 		CEB3512E26A4F9E100D42BDD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB3512D26A4F9E100D42BDD /* ContentView.swift */; };
 		CEB3513026A4F9E500D42BDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEB3512F26A4F9E500D42BDD /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		CED0324026A681B30022BC68 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0323D26A681B30022BC68 /* LoginView.swift */; };
 		CED0324126A681B30022BC68 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0323E26A681B30022BC68 /* PlayerView.swift */; };
 		CED0324726A7B81E0022BC68 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED0324626A7B81E0022BC68 /* PrivacyPolicyView.swift */; };
+		CEE9E26126CE9776007ED112 /* MetalVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE9E26026CE9776007ED112 /* MetalVideo.swift */; };
 		CEEBDC8E26C206C70005A7E6 /* VideoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEBDC8D26C206C70005A7E6 /* VideoWriter.swift */; };
 		CEEBDCCD26C2A3420005A7E6 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEBDCCC26C2A3420005A7E6 /* VideoViewController.swift */; };
 		CEF972D926BA2F8E0010E167 /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF972D826BA2F8E0010E167 /* Sounds.swift */; };
@@ -56,10 +58,11 @@
 		AC4DF328DA666FC2A71986A6 /* Pods_ShiranAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiranAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B545AF07B8CE8336DA95BCFB /* Pods_ShiranApp_ShiranAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShiranApp_ShiranAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1D5DA29FAEEBEE40CAF7F7F /* Pods-ShiranApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShiranApp.release.xcconfig"; path = "Target Support Files/Pods-ShiranApp/Pods-ShiranApp.release.xcconfig"; sourceTree = "<group>"; };
-		CE24A57D26C63C2D00085982 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		CE24A57D26C63C2D00085982 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE2DDF6026AAFD0200CD9C39 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		CE9033A726B506CC00C88EF1 /* MovieCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCreator.swift; sourceTree = "<group>"; };
 		CE9033A926B582FC00C88EF1 /* VideoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCaptureView.swift; sourceTree = "<group>"; };
+		CEB19E0426CB722C00570126 /* PoseDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDetection.swift; sourceTree = "<group>"; };
 		CEB3512826A4F9E100D42BDD /* ShiranApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShiranApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB3512B26A4F9E100D42BDD /* ShiranAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiranAppApp.swift; sourceTree = "<group>"; };
 		CEB3512D26A4F9E100D42BDD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		CED0323D26A681B30022BC68 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CED0323E26A681B30022BC68 /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		CED0324626A7B81E0022BC68 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		CEE9E26026CE9776007ED112 /* MetalVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalVideo.swift; sourceTree = "<group>"; };
 		CEEBDC8D26C206C70005A7E6 /* VideoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoWriter.swift; sourceTree = "<group>"; };
 		CEEBDCCC26C2A3420005A7E6 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		CEF972D826BA2F8E0010E167 /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
@@ -206,8 +210,10 @@
 				CEEBDC8D26C206C70005A7E6 /* VideoWriter.swift */,
 				CEF972D826BA2F8E0010E167 /* Sounds.swift */,
 				CEB3515E26A5047A00D42BDD /* SaveVideo.swift */,
-				CE24A57D26C63C2D00085982 /* ViewController2.swift */,
+				CE24A57D26C63C2D00085982 /* ViewController.swift */,
 				CE9033A726B506CC00C88EF1 /* MovieCreator.swift */,
+				CEB19E0426CB722C00570126 /* PoseDetection.swift */,
+				CEE9E26026CE9776007ED112 /* MetalVideo.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -237,6 +243,7 @@
 				CEB3512526A4F9E100D42BDD /* Frameworks */,
 				CEB3512626A4F9E100D42BDD /* Resources */,
 				703ABEE66A6E59A76E17C08E /* [CP] Embed Pods Frameworks */,
+				7F4196136E45628A1EEF2326 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,6 +282,7 @@
 				CEB3514126A4F9E500D42BDD /* Frameworks */,
 				CEB3514226A4F9E500D42BDD /* Resources */,
 				C43A54499FBB836F611A7CC2 /* [CP] Embed Pods Frameworks */,
+				DCA63E840D310453A12C0EC9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -373,6 +381,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShiranApp/Pods-ShiranApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7F4196136E45628A1EEF2326 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShiranApp/Pods-ShiranApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShiranApp/Pods-ShiranApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShiranApp/Pods-ShiranApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C18795CA9C236E0924DA25A3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -410,6 +435,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShiranApp-ShiranAppUITests/Pods-ShiranApp-ShiranAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DCA63E840D310453A12C0EC9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShiranApp-ShiranAppUITests/Pods-ShiranApp-ShiranAppUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShiranApp-ShiranAppUITests/Pods-ShiranApp-ShiranAppUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShiranApp-ShiranAppUITests/Pods-ShiranApp-ShiranAppUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E9B9C8A690B6E57B11C1CAE0 /* [CP] Check Pods Manifest.lock */ = {
@@ -468,13 +510,15 @@
 				CE9033AA26B582FC00C88EF1 /* VideoCaptureView.swift in Sources */,
 				CEF972D926BA2F8E0010E167 /* Sounds.swift in Sources */,
 				CEEBDC8E26C206C70005A7E6 /* VideoWriter.swift in Sources */,
+				CEE9E26126CE9776007ED112 /* MetalVideo.swift in Sources */,
 				CEEBDCCD26C2A3420005A7E6 /* VideoViewController.swift in Sources */,
 				CED0324726A7B81E0022BC68 /* PrivacyPolicyView.swift in Sources */,
-				CE24A57E26C63C2D00085982 /* ViewController2.swift in Sources */,
+				CE24A57E26C63C2D00085982 /* ViewController.swift in Sources */,
 				CED0324126A681B30022BC68 /* PlayerView.swift in Sources */,
 				CE9033A826B506CC00C88EF1 /* MovieCreator.swift in Sources */,
 				CED0323F26A681B30022BC68 /* RootView.swift in Sources */,
 				CE2DDF6126AAFD0200CD9C39 /* VideoCapture.swift in Sources */,
+				CEB19E0526CB722C00570126 /* PoseDetection.swift in Sources */,
 				CEB3512C26A4F9E100D42BDD /* ShiranAppApp.swift in Sources */,
 				CEB3515F26A5047B00D42BDD /* SaveVideo.swift in Sources */,
 			);

@@ -26,8 +26,8 @@ struct ContentView: View {
                     })
                     Spacer()
                 }
-                VideoCameraView2()
-                //VideoCameraView()
+                VideoCameraView()
+                //VideoCameraView2()
             }
             //VideoCaptureView(setDate: modifiedDate)
         }else if self.appState.isVideoPlayer{

@@ -6,7 +6,7 @@
 //
 
 //import Foundation
-
+/*
 import UIKit
 import AVFoundation
 import Vision
@@ -256,10 +256,11 @@ extension RealTimeImageClassficationViewController: Resnet50ModelManagerDelegate
 
 import SwiftUI
 //カメラのビュー
-struct VideoCameraView: UIViewControllerRepresentable {
+struct VideoCameraView2: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
         return RealTimeImageClassficationViewController()
     }
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
     }
 }
+*/

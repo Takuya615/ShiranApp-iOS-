@@ -4,7 +4,7 @@
 //
 //  Created by user on 2021/07/31.
 //
-/*
+
 import Foundation
 import AVFoundation
 import UIKit
@@ -19,8 +19,8 @@ class MovieCreator: NSObject {
     }
         
     
-    func create(images:[UIImage],size:CGSize,time:Int,completion:(URL)->()){
-            
+    func create(images:[UIImage],size:CGSize){//,completion:(URL)->()){
+        if images.isEmpty{print("なし");return}
             //保存先のURL
         let url = NSURL(fileURLWithPath:NSTemporaryDirectory()).appendingPathComponent("\(NSUUID().uuidString).mp4")
         // AVAssetWriter
@@ -29,8 +29,8 @@ class MovieCreator: NSObject {
         }
         
         //画像サイズを変える
-        let width = size.width
-        let height = size.height
+        let width = images[0].size.width
+        let height = images[0].size.height
         
         // AVAssetWriterInput
         let outputSettings = [
@@ -72,47 +72,59 @@ class MovieCreator: NSObject {
         var frameCount = 0
             
             // 各画像の表示する時間
-        let durationForEachImage = time
+        let durationForEachImage = 10//time
             
             // FPS
         let fps: __int32_t = 60
             
-            // 全画像をbufferに埋め込む
-        for image in images {
-                
-            if (!adaptor.assetWriterInput.isReadyForMoreMediaData) {
-                break
-            }
-                
-                // 動画の時間を生成(その画像の表示する時間/開始時点と表示時間を渡す)
-            let frameTime: CMTime = CMTimeMake(value: Int64(__int32_t(frameCount) * __int32_t(durationForEachImage)), timescale: fps)
-                //時間経過を確認(確認用)
-            let second = CMTimeGetSeconds(frameTime)
-            print("時間系 frameTime \(frameTime) , durationForEachImage \(durationForEachImage) , frameCount \(frameCount) , second \(second) .")
-                
-            let resize = resizeImage(image: image, contentSize: size)
-                // CGImageからBufferを生成
-            buffer = self.pixelBufferFromCGImage(cgImage: resize.cgImage!)
-                
-                // 生成したBufferを追加
-            if (!adaptor.append(buffer!, withPresentationTime: frameTime)) {
-                    // Error!
-                print("adaptError")
-                print(videoWriter.error!)
-            }
-                
-            frameCount += 1
-        }
         
-        // 動画生成終了
-        writerInput.markAsFinished()
-        videoWriter.endSession(atSourceTime: CMTimeMake(value: Int64((__int32_t(frameCount)) * __int32_t(durationForEachImage)), timescale: fps))
-        videoWriter.finishWriting(completionHandler: {
-            // Finish!
-            print("movie created.")
+        let queue = DispatchQueue(label: "object-detection-queue3")
+        adaptor.assetWriterInput.requestMediaDataWhenReady(on: queue, using: {
+            // 全画像をbufferに埋め込む
+            for image in images {
+                    
+                if (!adaptor.assetWriterInput.isReadyForMoreMediaData) {
+                    print("ここでbreakしてる")
+                    //break
+                    continue
+                }
+                    
+                    // 動画の時間を生成(その画像の表示する時間/開始時点と表示時間を渡す)
+                let frameTime: CMTime = CMTimeMake(value: Int64(__int32_t(frameCount) * __int32_t(durationForEachImage)), timescale: fps)
+                    //時間経過を確認(確認用)
+                let second = CMTimeGetSeconds(frameTime)
+                print("時間系 frameTime \(frameTime) , durationForEachImage \(durationForEachImage) , frameCount \(frameCount) , second \(second) .")
+                    
+                //let resize = resizeImage(image: image, contentSize: size)
+                    // CGImageからBufferを生成
+                buffer = self.pixelBufferFromCGImage(cgImage: image.cgImage!)
+                    
+                    // 生成したBufferを追加
+                if (!adaptor.append(buffer!, withPresentationTime: frameTime)) {
+                        // Error!
+                    print("adaptError")
+                    print(videoWriter.error!)
+                }
+                    
+                frameCount += 1
+            }
+        
+            
+            // 動画生成終了
+            print("先にフィニッシュムーヴはいっちゃってる")
+            writerInput.markAsFinished()
+            videoWriter.endSession(atSourceTime: CMTimeMake(value: Int64((__int32_t(frameCount)) * __int32_t(durationForEachImage)), timescale: fps))
+            videoWriter.finishWriting(completionHandler: {
+                // Finish!
+                print("movie created.")
+            })
+            SaveVideo().saveVideo(outputFileURL: url!)
+            //completion(url!)
         })
-        completion(url!)
-            //return url!
+        
+            
+        
+        
             
     }
         
@@ -181,10 +193,12 @@ class MovieCreator: NSObject {
         }
     
     
+    
+    
     func create2(images: [UIImage],completion:(URL)->()){
         // 生成した動画を保存するパス
             let tempDir = FileManager.default.temporaryDirectory
-            let previewURL = tempDir.appendingPathComponent("preview005.mp4")//      要注意　ファイル名変えるべき
+            let previewURL = tempDir.appendingPathComponent("preview006.mp4")//      要注意　ファイル名変えるべき
             
             // 既にファイルがある場合は削除する
             let fileManeger = FileManager.default
@@ -248,8 +262,8 @@ class MovieCreator: NSObject {
             videoWriter.startSession(atSourceTime: CMTime.zero)
             
             var frameCount: Int64 = 0
-        let durationForEachImage: Int64 = 1/10
-            let fps: Int32 = 30//28
+        let durationForEachImage: Int64 = 10
+            let fps: Int32 = 60//30//28
             
         /*while !adaptor.assetWriterInput.isReadyForMoreMediaData  {
             print("まだ用意できてねー")
@@ -286,7 +300,7 @@ class MovieCreator: NSObject {
 }
     
     
-    */
+    
     
     
 

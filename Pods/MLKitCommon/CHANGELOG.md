@@ -1,3 +1,5 @@
+# 2021-08-11 -- v3.1.0
+- Bug fixes.
 # 2021-06-29 -- v3.0.0
 - Raised the minimum supported version of Xcode to 12.4.
 - Upgraded the version range of GoogleDataTransport dependency in MLKitCommon
