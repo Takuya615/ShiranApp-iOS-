@@ -352,9 +352,6 @@ PODS:
   - Firebase/Firestore (8.5.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 8.5.0)
-  - Firebase/Storage (8.5.0):
-    - Firebase/CoreOnly
-    - FirebaseStorage (~> 8.5.0)
   - FirebaseAuth (8.5.0):
     - FirebaseCore (~> 8.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
@@ -382,9 +379,6 @@ PODS:
     - "gRPC-C++ (~> 1.28.0)"
     - leveldb-library (~> 1.22)
     - nanopb (~> 2.30908.0)
-  - FirebaseStorage (8.5.0):
-    - FirebaseCore (~> 8.0)
-    - GTMSessionFetcher/Core (~> 1.5)
   - GoogleDataTransport (9.1.0):
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
@@ -450,6 +444,7 @@ PODS:
     - gRPC-Core/Interface (= 1.28.2)
   - gRPC-Core/Interface (1.28.2)
   - GTMSessionFetcher/Core (1.6.1)
+  - Instructions (2.1.0)
   - leveldb-library (1.22.1)
   - MLImage (1.0.0-beta1)
   - MLKitCommon (3.1.0):
@@ -489,8 +484,8 @@ PODS:
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
-  - Firebase/Storage
   - GoogleMLKit/PoseDetection (= 2.3.0)
+  - Instructions
 
 SPEC REPOS:
   trunk:
@@ -501,7 +496,6 @@ SPEC REPOS:
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseFirestore
-    - FirebaseStorage
     - GoogleDataTransport
     - GoogleMLKit
     - GoogleToolboxForMac
@@ -510,6 +504,7 @@ SPEC REPOS:
     - "gRPC-C++"
     - gRPC-Core
     - GTMSessionFetcher
+    - Instructions
     - leveldb-library
     - MLImage
     - MLKitCommon
@@ -529,7 +524,6 @@ SPEC CHECKSUMS:
   FirebaseCore: 1c1ca72483b59b17050f5b4cec4fb748425a3901
   FirebaseCoreDiagnostics: 7bf55d386f9fc690d971b70a582142321a390eb8
   FirebaseFirestore: 9aa10de35bb76a5fe40fdf5c858669f0eac88a99
-  FirebaseStorage: 2c176ca64a68b45bddc3c7d4d2c0c839927ad92c
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
   GoogleMLKit: 53d5adbee0fe5a701e970f1387d2cfececd5bc50
   GoogleToolboxForMac: 8bef7c7c5cf7291c687cf5354f39f9db6399ad34
@@ -538,6 +532,7 @@ SPEC CHECKSUMS:
   "gRPC-C++": 13d8ccef97d5c3c441b7e3c529ef28ebee86fad2
   gRPC-Core: 4afa11bfbedf7cdecd04de535a9e046893404ed5
   GTMSessionFetcher: 36689134877faeb055b27dfa4ccc9ceaa42e029e
+  Instructions: 2465e321dde23f7c8fc26fe8efddf605df80dfba
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   MLImage: 647f3d580c10b3c9a3f6154f5d7baead60c42a0c
   MLKitCommon: 1b5c79d52f79d9cc93ab5300e9713c4c215121ea
@@ -549,6 +544,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   Protobuf: 7327d4444215b5f18e560a97f879ff5503c4581c
 
-PODFILE CHECKSUM: cc106da1a4a52ce4daacd0807a8f117098e341e3
+PODFILE CHECKSUM: 8e980160dfa4b265555d0fe0d70997c451e225ad
 
 COCOAPODS: 1.10.1

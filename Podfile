@@ -9,8 +9,7 @@ target 'ShiranApp' do
   pod 'GoogleMLKit/PoseDetection', '2.3.0'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
-  pod 'Firebase/Storage'
-
+  pod 'Instructions'
 
   target 'ShiranAppTests' do
     inherit! :search_paths

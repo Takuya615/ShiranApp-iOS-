@@ -37,7 +37,7 @@ class SystemSounds{
     @IBAction func buttonSampleWav(_ sender : Any) {
         var soundIdRing:SystemSoundID = 0
         if let soundUrl:NSURL = NSURL(fileURLWithPath:
-            Bundle.main.path(forResource: "sample", ofType:"mp3")!) as NSURL?{
+            Bundle.main.path(forResource: "cheers", ofType:"mp3")!) as NSURL?{
             AudioServicesCreateSystemSoundID(soundUrl, &soundIdRing)
             AudioServicesPlaySystemSound(soundIdRing)
         }

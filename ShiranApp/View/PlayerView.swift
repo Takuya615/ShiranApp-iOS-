@@ -4,7 +4,7 @@
 //
 //  Created by user on 2021/06/29.
 //
-
+/*
 import SwiftUI
 import AVKit
 
@@ -39,3 +39,4 @@ struct PlayerView_Previews: PreviewProvider {
         PlayerView()
     }
 }
+*/

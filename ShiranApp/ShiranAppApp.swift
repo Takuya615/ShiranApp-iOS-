@@ -40,33 +40,31 @@ class DataCounter: ObservableObject {
     let continuedWeek = "wDay"
     let retry = "retry"
     let _LastTimeDay = "LastTimeDay"
-
+    let taskTime = "TaskTime"
     
+    
+    @Published var coachMark1: Bool = UserDefaults.standard.bool(forKey: "CoachMark1")//Save on CoachMarks-37
+    @Published var coachMark2: Bool = UserDefaults.standard.bool(forKey: "CoachMark2")//Save on ViewController2 -82
     @Published var continuedDayCounter: Int = UserDefaults.standard.integer(forKey: "cDay")//めいんViewに表示する用
     @Published var continuedRetryCounter: Int = UserDefaults.standard.integer(forKey: "retry")//めいんViewに表示する用
-    @Published var capStart: Bool = false//??
-    
+    //@Published var capStart: Bool = false//??
 
     //日時の差分を計算するメソッド
     func scoreCounter(){
-        let totalDay: Int = UserDefaults.standard.integer(forKey: self.totalDay)
-
+        let totalDay: Int = UserDefaults.standard.integer(forKey: self.totalDay)//読み込み
+        
         let today = Date()
+        //let modifiedDate = Calendar.current.date(byAdding: .day, value: -1, to: today)!
         let LastTimeDay: Date? = UserDefaults.standard.object(forKey: self._LastTimeDay) as? Date
     
         if LastTimeDay == nil{
             print("記念すべき第一回目")
-            UserDefaults.standard.set(1, forKey: self.totalDay)
-            UserDefaults.standard.set( 1, forKey: self.continuedDay)//値の書き込み
-            UserDefaults.standard.set(today, forKey: self._LastTimeDay)//値の書き込み
+            UserDefaults.standard.set(1, forKey: self.totalDay)//総日数
+            UserDefaults.standard.set( 1, forKey: self.continuedDay)//継続日数
+            UserDefaults.standard.set(today, forKey: self._LastTimeDay)//デイリー更新
+            updateTaskTime(total: 181)//TaskTime初期値を５秒に修正する
             return
         }
-        
-        //let day1DaysAgo = Calendar.current.date(byAdding: .day, value: -1, to: today)!
-        print("today:\(today)") //t
-        //print("day3DaysAgo:\(day1DaysAgo)") //day3DaysAgo:2021-03-05 02:44:45 +0000
-        print("LastTimeDay:\(LastTimeDay!)")
-                            
                     
         let cal = Calendar(identifier: .gregorian)
         let todayDC = Calendar.current.dateComponents([.year, .month,.day], from: today)
@@ -80,30 +78,51 @@ class DataCounter: ObservableObject {
         //var calenderList:[ Int] = UserDefaults.standard.object(forKey: self.calender) as? [Int] ?? []//値が無ければ空のリスト
         let continuedDay = UserDefaults.standard.integer(forKey: self.continuedDay)
         let retry = UserDefaults.standard.integer(forKey: self.retry)
+        
         if diff.day == 0{
-            print("デイリーそのまま")
-            
+            print("デイリー達成済み")
+            return
         }else if(diff.day == 1){
             print("毎日記録更新")
-            UserDefaults.standard.set(totalDay + 1, forKey: self.totalDay)
-            UserDefaults.standard.set(continuedDay + 1, forKey: self.continuedDay)//値の書き込み ↓表示の更新
+            
+            UserDefaults.standard.set(continuedDay + 1, forKey: self.continuedDay)
             continuedDayCounter = continuedDay + 1
             
         }else{
             print("記録リセット")
-            UserDefaults.standard.set(totalDay + 1, forKey: self.totalDay)
-            UserDefaults.standard.set(0, forKey: self.continuedDay)//値の書き込み　↓表示の更新
+            UserDefaults.standard.set(0, forKey: self.continuedDay)
             continuedDayCounter = 0
             UserDefaults.standard.set(retry + 1, forKey: self.retry)//値の書き込み　↓表示の更新
             continuedRetryCounter = retry + 1
         }
-    
-        UserDefaults.standard.set(today, forKey: self._LastTimeDay)//値の書き込み
+        print("ここまで来てるよ")
+        updateTaskTime(total: totalDay+1)
+        UserDefaults.standard.set(totalDay + 1, forKey: self.totalDay)
+        UserDefaults.standard.set(today, forKey: self._LastTimeDay)
+        
+        
+    }
 
-         
-        //連続週数　前回に日曜日より６日前に1度でもHIItしたか
+    func updateTaskTime(total:Int){
+        if total%2 == 0{return}//偶数なら見送り
+        var tt = UserDefaults.standard.integer(forKey: self.taskTime)
         
-        
+        switch total {
+        case 0 ..< 61:
+            tt = tt + 1
+        case 61 ..< 91:
+            tt = tt + 2
+        case 91 ..< 121:
+            tt = tt + 3
+        case 121 ..< 151:
+            tt = tt + 4
+        case 151 ..< 181:
+            tt = tt + 5
+        default://   over 181
+            tt = tt + 5
+        }
+        print("タスクタイム＝\(tt)")
+        UserDefaults.standard.set(tt, forKey: self.taskTime)
     }
     
     
@@ -111,7 +130,6 @@ class DataCounter: ObservableObject {
 
 class AppState: ObservableObject {
     @Published var isLogin = false
-    @Published var isVideoMode = false
     @Published var isVideoPlayer = false
     @Published var isPrivacyPolicy = false
     @Published var playUrl = ""

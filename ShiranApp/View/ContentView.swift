@@ -13,29 +13,31 @@ struct ContentView: View {
     @EnvironmentObject var appState: AppState
     @EnvironmentObject var dataCounter: DataCounter
     @State var push = false
-    //@ObservedObject private var videoCamera = VideoCamera()
+    @State var isVideo = false
     
     let modifiedDate = Calendar.current.date(byAdding: .second, value: 30, to: Date())!
     
     var body: some View {
-        Group{if(self.appState.isVideoMode){
+        Group{if self.appState.isPrivacyPolicy{
+            PrivacyPolicyView()
+        }else if self.isVideo {
             VStack{
                 HStack{
-                    Button(action: {self.appState.isVideoMode = false}, label: {
+                    Button(action: {isVideo = false}, label: {
                         Text("  ＜Back").font(.system(size: 20))
                     })
                     Spacer()
                 }
-                VideoCameraView()
-                //VideoCameraView2()
+                VideoCameraView2(isVideo: $isVideo)
+                    .onDisappear(perform: {
+                        self.dataCounter.scoreCounter()
+                    })
             }
-            //VideoCaptureView(setDate: modifiedDate)
-        }else if self.appState.isVideoPlayer{
-            PlayerView()
-        }else if self.appState.isPrivacyPolicy{
-            PrivacyPolicyView()
         }else {
                 ZStack{
+                    if !dataCounter.coachMark1 {// get true when push fab
+                        CoachMarkView()
+                    }
                     fragment
                     fab
                 }
@@ -51,50 +53,45 @@ struct ContentView: View {
               }
             SecondView()
                 .tabItem {
-                    Image(systemName: "applelogo")
-                    Text("動画リスト")
+                    Image(systemName: "pencil")
+                    Text("活動記録")
                 }
             ThirdView()
              .tabItem {
-                 Image(systemName: "pencil")
+                 Image(systemName: "questionmark")
                  Text("？？？")
                }
         }
     }
     
     var fab: some View {
-        
         VStack {
             Spacer()
             HStack {
                 Spacer()
                 
-                
-                Button(action: {
-                    dataCounter.scoreCounter()
-                }, label: {Text("Button")})
-                
-                
                 Button(action:{
-                    self.appState.isVideoMode = true
+                    self.isVideo = true
+                    self.dataCounter.coachMark1 = true
                 }, label: {
-                    Image(systemName: "video.fill.badge.plus")
+                    Image(systemName: "flame")//"video.fill.badge.plus")
                         .foregroundColor(.white)
-                        .font(.system(size: 24))
+                        .font(.system(size: 40))
                 })
                 .frame(width: 60, height: 60, alignment: .center)
-                .background(Color.blue)
+                .background(Color.orange)
                 .cornerRadius(30.0)
                 .shadow(color: .gray, radius: 3, x: 3, y: 3)
                 .padding(EdgeInsets(top: 0, leading: 0, bottom: 60.0, trailing: 16.0))
-                                
-                
+                /*.fullScreenCover(isPresented: self.$isVideo, content: {
+                    VideoCameraView2(isVideo: $isVideo)
+                })*/
+            
             }
         }
     
         
     }
-    
     
 }
 
@@ -177,6 +174,7 @@ struct SecondView: View{
         var id = UUID()     // ユニークなIDを自動で設定¥
         var date: String
         var url: String
+        var score: Int
     }
     @State var videos:[Videos] = []
     
@@ -185,17 +183,23 @@ struct SecondView: View{
         NavigationView{
             List{
                 ForEach(videos) {video in
-                    Text(video.date)
+                    HStack{
+                        Text(video.date)
+                        Spacer()
+                        Text("スコア\(video.score)")
+                    }
+                    /*Text(video.date)
                         .contentShape(RoundedRectangle(cornerRadius: 5))
                         .onTapGesture {
                             print("タップされました\(video.date)")
                             self.appState.playUrl = video.url
-                            self.appState.isVideoPlayer = true
-                        }
+                            //self.appState.isVideoPlayer = true
+                        }*/
+                    
                 }.onDelete(perform: delete)
             }
             .onAppear(perform: VideoList)//リストの更新をここでできる
-            .navigationTitle("ビデオリスト")
+            .navigationTitle("活動記録")
             .navigationBarTitleDisplayMode(.inline)
         }
     }
@@ -210,13 +214,15 @@ struct SecondView: View{
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                
+                //print("VideoList動いている\(querySnapshot!.documents.count)")
                 for document in querySnapshot!.documents {
                     let date = document.data()["date"]
-                    let url = document.data()["url"]
-                    if date == nil || url == nil {return}
-                    videos.append(Videos(date: (date as? String)!, url: (url as? String)!))
-                
+                    //let url = document.data()["url"]
+                    let score = document.data()["score"]
+                    //print("取得　date=\(date) url=\(url) score=\(score)")
+                    if date == nil || score == nil {continue}
+                    videos.append(Videos(date: (date as? String)!, url: "", score: (score as? Int)!))
+                    videos.reverse()
                 }
             }
         }
@@ -232,7 +238,7 @@ struct SecondView: View{
                 print("Error removing document: \(err)")
             } else {
                 print("項目の削除成功　Document successfully removed!")
-                let storageRef = Storage.storage().reference()
+                /*let storageRef = Storage.storage().reference()
                 let desertRef = storageRef.child("\(uid!) /\(selectDate).mp4")
                 desertRef.delete { error in
                   if let error = error {
@@ -242,7 +248,7 @@ struct SecondView: View{
                     // File deleted successfully
                     print("動画の削除も　せいこう！")
                   }
-                }
+                }*/
                 
             }
         }
